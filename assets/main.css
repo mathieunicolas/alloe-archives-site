@@ -1,0 +1,7 @@
+.page-body > div > p {
+    text-align: justify;
+}
+
+.prose-code > pre {
+    white-space: pre-line;
+}
