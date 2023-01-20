@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
+  modules: ['@nuxt/content'],
   css: ['@/assets/main.css'],
   content: {
     sources: {
