@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content'],
   css: ['@/assets/main.css'],
   content: {
+    //ignores: ['.+\.(?:pdf|jpg|png|epub|excalidraw)'],
     sources: {
       gh: {
         driver: 'github',
