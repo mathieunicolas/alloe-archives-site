@@ -6,14 +6,14 @@ export default defineNuxtConfig({
   ],
   css: ['@/assets/main.css'],
   content: {
-    // sources: {
-    //   gh: {
-    //     driver: 'github',
-    //     repo: 'mathieunicolas/alloe',
-    //     dir: '/',
-    //     prefix: '/'
-    //   }
-    // },
+    sources: {
+      gh: {
+        driver: 'github',
+        repo: 'mathieunicolas/alloe',
+        dir: '/',
+        prefix: '/'
+      }
+    },
     navigation: {
       fields: ['auteur']
     }
