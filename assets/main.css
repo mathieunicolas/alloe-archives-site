@@ -5,3 +5,8 @@
 .prose-code > pre {
     white-space: pre-line;
 }
+
+.page-body > div > p > img {
+    display: block;
+    margin: auto;
+}
