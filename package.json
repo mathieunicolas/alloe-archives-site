@@ -11,6 +11,6 @@
   "devDependencies": {
     "@nuxt-themes/docus": "^1.10.1",
     "nuxt": "^3.3.3",
-    "nuxt-content-assets": "^0.9.0-alpha"
+    "nuxt-content-assets": "^0.9.0-beta"
   }
 }
