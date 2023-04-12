@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
   modules: [
-    'nuxt-content-assets', // make sure to add before content!
+    'nuxt-content-assets',
     '@nuxt/content'
   ],
   css: ['@/assets/main.css'],
@@ -19,9 +19,8 @@ export default defineNuxtConfig({
     }
   },
   'content-assets': {
-    output: '/[folder]/[file]',
-    additionalExtensions: 'epub',
-  },
+    // imageSize: 'attrs'
+  }
   // nitro: {
   //   prerender: {
   //     routes: [

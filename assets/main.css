@@ -9,4 +9,9 @@
 .page-body > div > p > img {
     display: block;
     margin: auto;
+    height: 300px;
+}
+
+p.dialog {
+    margin: 0 !important;
 }
