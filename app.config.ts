@@ -1,28 +1,38 @@
 export default defineAppConfig({
   docus: {
     title: 'alloé',
-    description: 'Allez, on écrit ! Écriture collaborative',
+    description: 'The best place to start your documentation.',
     image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
     socials: {
-      twitter: 'nuxt_themes',
+      twitter: 'nuxt_js',
       github: 'nuxt-themes/docus',
+      nuxt: {
+        label: 'Nuxt',
+        icon: 'simple-icons:nuxtdotjs',
+        href: 'https://nuxt.com'
+      }
+    },
+    github: {
+      dir: '.starters/default/content',
+      branch: 'main',
+      repo: 'docus',
+      owner: 'nuxt-themes',
+      edit: true
     },
     aside: {
       level: 1,
-      exclude: ['/readme']
+      collapsed: false,
+      exclude: []
+    },
+    main: {
+      padded: true,
+      fluid: true
     },
     header: {
       logo: true,
       showLinkIcon: true,
-      exclude: ['/readme']
-    },
-    footer: {
-      iconLinks: [
-        {
-          href: 'https://nuxt.com',
-          icon: 'IconNuxtLabs'
-        }
-      ]
+      exclude: ['/readme'],
+      fluid: true
     }
   }
 })
