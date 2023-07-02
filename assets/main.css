@@ -1,0 +1,17 @@
+.page-body > div > p {
+    text-align: justify;
+}
+
+.prose-code > pre {
+    white-space: pre-line;
+}
+
+.page-body > div > p > img {
+    display: block;
+    margin: auto;
+    height: 300px;
+}
+
+p.dialog {
+    margin: 0 !important;
+}

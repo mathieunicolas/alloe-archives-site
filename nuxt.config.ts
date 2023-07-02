@@ -1,9 +1,10 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
+  css: ['@/assets/main.css'],
   modules: [
     'nuxt-content-assets', // make sure to add before content!
     '@nuxt/content',
-    '@nuxt/devtools'
+    '@nuxt/devtools',
   ],
   app: {
     head: {
@@ -15,6 +16,7 @@ export default defineNuxtConfig({
       ]
     },
   },
+
   content: {
     sources: {
       github: {
@@ -26,5 +28,5 @@ export default defineNuxtConfig({
         // Imagine you have a blog inside your content folder. You can set this option to `content/blog` with the prefix option to `/blog` to avoid conflicts with local files.
       },
     }
-  }
+  },
 })
