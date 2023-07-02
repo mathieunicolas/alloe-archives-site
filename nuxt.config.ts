@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     'nuxt-content-assets', // make sure to add before content!
     '@nuxt/content',
     '@nuxt/devtools',
+    '@vite-pwa/nuxt'
   ],
   app: {
     head: {
@@ -16,7 +17,42 @@ export default defineNuxtConfig({
       ]
     },
   },
-
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'alloé : allez, on écrit !',
+      short_name: 'alloé',
+      theme_color: '#ffffff',
+      icons: [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+      ],
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+    client: {
+      installPrompt: true,
+      // you don't need to include this: only for testing purposes
+      // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
+      periodicSyncForUpdates: 20,
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module',
+    },
+  },
   content: {
     sources: {
       github: {

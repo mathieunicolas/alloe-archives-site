@@ -1,7 +1,6 @@
 <script setup>
 const fontSize = useFontSize()
 const { layout } = useContent()
-console.log(layout.value)
 </script>
 
 <template>

@@ -1,5 +1,13 @@
+<script setup>
+const colorMode = useColorMode()
+
+const imgsrc = computed(() => {
+  return colorMode.value === 'light' ? '/logo-light.svg' : '/logo-dark.svg'
+})
+</script>
+
 <template>
-  <img class="logo" src="/logo-light.svg">
+  <img class="logo" :src="imgsrc">
 </template>
 
 <style lang="ts" scoped>
