@@ -20,10 +20,13 @@ export default defineAppConfig({
     },
     main: {
       padded: true,
-      fluid: true
+      fluid: false
     },
     header: {
-      logo: true,
+      logo: {
+        light: '/logo-light.png',
+        dark: '/logo-dark.png'
+      },
       showLinkIcon: true,
       exclude: ['/readme'],
       fluid: true

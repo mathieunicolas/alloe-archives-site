@@ -1,12 +1,13 @@
 <script setup>
 const fontSize = useFontSize()
 const { layout } = useContent()
+const step = 0.25
 </script>
 
 <template>
   <div v-if="layout === 'default'">
-    <Icon class="icons" name="material-symbols:text-increase" @click="fontSize = fontSize + 0.5" />
-    <Icon class="icons" name="material-symbols:text-decrease" @click="fontSize = fontSize - 0.5" />
+    <Icon class="icons" name="material-symbols:text-increase" @click="fontSize = fontSize + step" />
+    <Icon class="icons" name="material-symbols:text-decrease" @click="fontSize = fontSize - step" />
   </div>
 </template>
 
@@ -18,6 +19,6 @@ const { layout } = useContent()
 
 .wrapper {
   position: sticky;
-  top: 50px;
+  top: 250px;
 }
 </style>

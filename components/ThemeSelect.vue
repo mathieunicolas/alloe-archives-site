@@ -10,6 +10,7 @@ const onClick = () => {
 </script>
 
 <template>
+  <Icon name="octicon:dot-fill-24" :style="$pwa?.offlineReady ? 'color: green;' : 'display: none;'" />
   <FontSize />
   <button
     aria-label="Color Mode"
