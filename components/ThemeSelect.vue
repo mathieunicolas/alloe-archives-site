@@ -11,7 +11,7 @@ const onClick = () => {
 }
 
 const dotColor = computed(() => {
-  if($pwa.offlineReady) {
+  if($pwa?.offlineReady) {
     return 'color: green;'
   } else {
     return 'display: none';
