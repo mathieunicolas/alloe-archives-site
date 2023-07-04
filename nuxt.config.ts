@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     workbox: {
       navigateFallback: undefined,
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json}', 'api/**', 'api/*'],
+      ignoreURLParametersMatching: [/^\/api\//],
     },
     client: {
       installPrompt: true,
