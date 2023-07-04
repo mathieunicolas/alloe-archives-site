@@ -47,10 +47,6 @@ export default defineNuxtConfig({
       navigateFallback: undefined,
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json}', 'api/**', 'api/*'],
       ignoreURLParametersMatching: [/^\/api\//],
-      runtimeCaching: [{
-        urlPattern: ({ url }) => {
-          return url.pathname.startsWith("/api");
-        },
         handler: "CacheFirst" as const,
         options: {
           cacheableResponse: {
