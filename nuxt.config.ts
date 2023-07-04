@@ -47,13 +47,6 @@ export default defineNuxtConfig({
       navigateFallback: undefined,
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json}', 'api/**', 'api/*'],
       ignoreURLParametersMatching: [/^\/api\//],
-        handler: "CacheFirst" as const,
-        options: {
-          cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
-      }]
     },
     client: {
       installPrompt: true,
