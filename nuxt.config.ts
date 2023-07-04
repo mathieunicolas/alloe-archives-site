@@ -46,7 +46,18 @@ export default defineNuxtConfig({
     workbox: {
       navigateFallback: undefined,
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json}', 'api/**', 'api/*'],
-      ignoreURLParametersMatching: [/^api\//],
+      ignoreURLParametersMatching: [/^\/api\//],
+      runtimeCaching: [{
+        urlPattern: ({ url }) => {
+          return url.pathname.startsWith("/api");
+        },
+        handler: "CacheFirst" as const,
+        options: {
+          cacheableResponse: {
+            statuses: [0, 200],
+          },
+        },
+      }]
     },
     client: {
       installPrompt: true,
@@ -72,5 +83,5 @@ export default defineNuxtConfig({
         // Imagine you have a blog inside your content folder. You can set this option to `content/blog` with the prefix option to `/blog` to avoid conflicts with local files.
       },
     }
-  },
+  }
 })
