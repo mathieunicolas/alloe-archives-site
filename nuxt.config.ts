@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   },
   pwa: {
     registerType: 'autoUpdate',
+    registerWebManifestInRouteRules: true,
     manifest: {
       name: 'alloé : allez, on écrit !',
       short_name: 'alloé',
@@ -35,7 +36,7 @@ export default defineNuxtConfig({
             "type": "image/png"
         },
         {
-          src: 'pwa-512x512.png',
+          src: '/android-chrome-512x512.png',
           sizes: '512x512',
           type: 'image/png',
           purpose: 'any maskable',
@@ -43,7 +44,7 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      navigateFallback: '/',
+      navigateFallback: undefined,
       globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
     },
     client: {
