@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-const { $pwa } = useNuxtApp()
 const colorMode = useColorMode()
 const onClick = () => {
   const values = ['system', 'light', 'dark']
@@ -9,18 +7,9 @@ const onClick = () => {
 
   colorMode.preference = values[next]
 }
-
-const dotColor = computed(() => {
-  if($pwa?.offlineReady) {
-    return 'color: green;'
-  } else {
-    return 'display: none';
-  }
-})
 </script>
 
 <template>
-  <Icon name="octicon:dot-fill-24" :style="dotColor" />
   <FontSize />
   <button
     aria-label="Color Mode"
