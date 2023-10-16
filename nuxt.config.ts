@@ -1,10 +1,10 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
+  devtools: false,
   css: ['@/assets/main.css'],
   modules: [
     'nuxt-content-assets', // make sure to add before content!
     '@nuxt/content',
-    '@nuxt/devtools',
   ],
   app: {
     head: {
