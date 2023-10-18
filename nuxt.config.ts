@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
   devtools: false,
+  hooks: {
+    close: () => {
+      process.exit()
+    }
+  },
   css: ['@/assets/main.css'],
   modules: [
     'nuxt-content-assets', // make sure to add before content!
