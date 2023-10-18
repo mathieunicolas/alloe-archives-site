@@ -2,7 +2,7 @@ export default defineAppConfig({
   docus: {
     title: 'alloé',
     description: 'Allez, on écrit !',
-    image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
+    image: 'https://raw.githubusercontent.com/mathieunicolas/alloe-site/main/public/og_image.png',
     socials: {
       github: 'mathieunicolas/alloe',
     },
