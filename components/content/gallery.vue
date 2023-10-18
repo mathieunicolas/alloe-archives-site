@@ -18,7 +18,7 @@ setInterval(() => {
   <Transition name="fade" mode="out-in">
   <figure>
   <NuxtLink :to="covers[inc].src">
-    <img :key="inc" :src="'https://raw.githubusercontent.com/mathieunicolas/alloe/main/'+covers[inc].cover">
+    <img :key="inc" :src="'https://raw.githubusercontent.com/mathieunicolas/alloe-archives/main/'+covers[inc].cover">
   </NuxtLink>
     <figcaption style="text-align: center;">{{ covers[inc].title }}</figcaption>
   </figure>
