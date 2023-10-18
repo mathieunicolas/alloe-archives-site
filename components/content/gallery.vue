@@ -15,14 +15,15 @@ setInterval(() => {
 </script>
 
 <template>
-  <Transition name="fade" mode="out-in">
+  <img v-for="img of covers" :key="img.src" v-show="false" :src="'https://raw.githubusercontent.com/mathieunicolas/alloe-archives/main/'+img.cover" />
   <figure>
   <NuxtLink :to="covers[inc].src">
+  <Transition name="fade" mode="out-in">
     <img :key="inc" :src="'https://raw.githubusercontent.com/mathieunicolas/alloe-archives/main/'+covers[inc].cover">
+  </Transition>
   </NuxtLink>
     <figcaption style="text-align: center;">{{ covers[inc].title }}</figcaption>
   </figure>
-  </Transition>
 </template>
 
 <style scoped>
@@ -33,7 +34,7 @@ setInterval(() => {
 
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
+  opacity: 0.4;
 }
 
 </style>
